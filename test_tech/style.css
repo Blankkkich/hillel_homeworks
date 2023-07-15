@@ -1,3 +1,11 @@
 .table {
-  color: blueviolet !important; 
+  color: blueviolet !important;
+}
+
+.body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.article {
+  font-weight: bolder;
 }
