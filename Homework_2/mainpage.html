@@ -6,9 +6,13 @@
     <title>SaUA</title>
   </head>
   <body>
-    <form action="https://fom.in.ua/echo" oninput="result.value = slider.value">
+    <form
+      action="https://fom.in.ua/echo"
+      oninput="resultPrice.value = priceId.value"
+      oninput="resultYear.value = yearId.value"
+    >
       Тип кузова: <br />
-      <select>
+      <select name="carcass">
         <option value="sedan">Седан</option>
         <option value="coupe">Купе</option>
         <option value="suv">Позашляховик</option>
@@ -19,7 +23,7 @@
         <option value="van">Фургон</option></select
       ><br />
       Оберіть марку автівки<br />
-      <select>
+      <select name="brand">
         <option value="audi">Audi</option>
         <option value="bmw">BMW</option>
         <option value="dacia">Dacia</option>
@@ -37,16 +41,56 @@
       Виберіть приблизну ціну <br />
       <input
         type="range"
-        name="pfrom"
-        id="slider"
+        name="price"
+        id="priceId"
         min="0"
         max="150000"
         step="200"
       />
       <br />
       Вибрана ціна:
-      <output name="result" for="slider">75000</output> $
-
+      <output name="resultPrice" for="priceId">75000</output> $ <br /><br />
+      Виберіть рік випуску <br />
+      <input
+        type="range"
+        name="year"
+        id="yearId"
+        min="1929"
+        max="2023"
+        step="1"
+      />
+      : <output name="resultYear" for="yearId">2000</output> рік <br />
+      <!--не розумію чого він не виводить((-->
+      <input type="checkbox" name="status" value="condition_good" />В гарному
+      стані <br />
+      <input type="checkbox" name="status" value="condition_bad" />В поганому
+      стані <br />
+      <input type="checkbox" name="status" value="inCredit" />В кредиті<br />
+      <input
+        type="checkbox"
+        name="status"
+        value="customs_clearence+"
+      />Розмитненна<br />
+      <input
+        type="checkbox"
+        name="status"
+        value="condition_clearence-"
+      />Нерозмитненная
+      <br />
+      <select name="Fuel">
+        <option value="gas">Газ</option>
+        <option value="petrol">Бензин</option>
+        <option value="diesel">Дизель</option>
+        <option value="electricity">Струм</option></select
+      ><br />
+      <select name="gsb">
+        <option value="auto">Автоматична</option>
+        <option value="oldfashionedsexyway">Механічна</option></select
+      ><br />
+      <!--Такий вигляд коду для вебу норм чи плагін хоче щоб код не пройшов кодревью?-->
+      Напишіть колір автівки<br />
+      <input type="text" name="colour" /><br />
+      <input type="submit" value="Далі" />
       <input type="reset" />
     </form>
   </body>
