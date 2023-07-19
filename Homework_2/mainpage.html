@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaUA</title>
+  </head>
+  <body>
+    <form action="https://fom.in.ua/echo" oninput="result.value = slider.value">
+      Тип кузова: <br />
+      <select>
+        <option value="sedan">Седан</option>
+        <option value="coupe">Купе</option>
+        <option value="suv">Позашляховик</option>
+        <option value="wagon">Універсал</option>
+        <option value="hatchback">Хетчбек</option>
+        <option value="compackt">Компакт</option>
+        <option value="pickup">Пікап</option>
+        <option value="van">Фургон</option></select
+      ><br />
+      Оберіть марку автівки<br />
+      <select>
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="dacia">Dacia</option>
+        <option value="fiat">Fiat</option>
+        <option value="ford">Ford</option></select
+      ><br />
+      <select>
+        <option value="germany">Німеччина</option>
+        <option value="france">Франція</option>
+        <option value="italy">Італія</option>
+        <option value="usa">Сполучені Штати Америки</option>
+        <option value="romania">Румунія</option>
+      </select>
+      <br />
+      Виберіть приблизну ціну <br />
+      <input
+        type="range"
+        name="pfrom"
+        id="slider"
+        min="0"
+        max="150000"
+        step="200"
+      />
+      <br />
+      Вибрана ціна:
+      <output name="result" for="slider">75000</output> $
+
+      <input type="reset" />
+    </form>
+  </body>
+</html>
