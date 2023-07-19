@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!--Потрібно повторити за допомогою розмітки таблицю з картинки
-
-        обов'язково відтворити:
-        розмір таблички (стовпці-ряди)
-        об'єднання комірок
-        межа комірок – подвійна
-        можна не відтворювати:
-        розмір у пікселях
-        шрифт
-        колір заповнення осередків
-        товщину кордонів
-    -->
-    
-</body>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Tables</title>
+  </head>
+  <body>
+    <table border="2">
+      <tbody>
+        <tr class="top">
+          <td align="center" colspan="4">MY FIRST TABLE</td>
+        </tr>
+        <tr class="top">
+          <td>1d Cell</td>
+          <td>2d Cell</td>
+          <td colspan="2" rowspan="3">6 cells merged together</td>
+        </tr>
+        <tr class="top" align="center">
+          <td colspan="2">2 cells merged into one</td>
+        </tr>
+        <tr class="bottom" align="center">
+          <td width="70px">1st cell 3rd row</td>
+          <td width="70px">2st cell 3rd row</td>
+        </tr>
+        <tr class="bottom">
+          <td align="center" colspan="4">Do You Like Tables?</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
