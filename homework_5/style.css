@@ -1,0 +1,45 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.background {
+  background-color: #8f8896;
+}
+
+.list li {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+#body .link {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.div .divs {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 48px;
+}
+
+#h4 {
+  color: #576fbb;
+}
+
+.div.p {
+  color: #576fbb;
+  font-size: 28px;
+}
+
+.div {
+  color: goldenrod;
+  font-weight: lighter;
+  font-style: normal;
+}
