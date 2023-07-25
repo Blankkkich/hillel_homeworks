@@ -1,0 +1,49 @@
+.neptun {
+  position: absolute;
+  top: 85px;
+  left: 280px;
+}
+
+.uranus {
+  position: absolute;
+  top: 115px;
+  left: 130px;
+}
+
+.jupiter {
+  position: absolute;
+  top: 206px;
+  left: 214px;
+}
+
+.asteroid {
+  position: absolute;
+  top: 130px;
+  left: 510px;
+}
+
+.starship {
+  position: absolute;
+  top: 230px;
+  left: 212px;
+}
+
+.ufo {
+  position: absolute;
+  top: 380px;
+  left: 200px;
+}
+
+.legoman {
+  position: absolute;
+  top: 400px;
+  left: 570px;
+}
+
+.container {
+  position: relative;
+}
+
+.body_bg {
+  background: url("https://htmlbase.ru/storage/app/media/position-task1/bg.jpg");
+}
