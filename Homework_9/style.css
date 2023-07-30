@@ -2,31 +2,30 @@
   width: 1920px;
   height: 700px;
   background: #eeeff1;
-  padding-left: 399px;
-  padding-top: 79px;
+  padding-left: 382px;
+  padding-top: 59px;
+  margin-bottom: 48px;
 }
 
 .navigation {
-  list-style-type: none;
   overflow: hidden;
   gap: 42px;
 }
 
 p,
 h2,
+#project,
 #navigation_text,
 #button_text,
 .header {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-style: normal;
   line-height: 164.063%;
   font-size: 16px;
 }
 
 li {
   float: left;
-  display: block;
   color: #34547a;
   text-align: center;
   padding: 16px;
@@ -40,8 +39,8 @@ li {
 }
 
 .header {
-  margin-top: 178px;
-  margin-bottom: 60px;
+  margin-top: 126px;
+  margin-bottom: 69px;
   width: 541px;
   height: 45px;
   color: #000;
@@ -49,7 +48,7 @@ li {
   font-weight: 500;
 }
 
-p {
+.graytext {
   width: 540px;
   height: 67px;
   color: #727272;
@@ -57,9 +56,9 @@ p {
 }
 
 .button {
-  margin-top: 35px;
+  margin-top: 71px;
   background: #34547a;
-  height: 60px;
+  height: 63px;
   width: 225px;
   display: inline-block;
 }
@@ -72,18 +71,50 @@ p {
 }
 
 .aboutme {
-  margin-bottom: 100px;
-  margin-left: 690px;
+  margin-bottom: 105px;
+  margin-left: 685px;
   width: 540px;
   height: 147px;
+  text-align: center;
 }
 
 h2 {
   color: #000;
-  text-align: center;
   font-size: 32px;
   font-weight: 500;
   line-height: normal;
+  margin-bottom: 38px;
 }
 
+.projects {
+  background: var(--accent, #34547a);
+  width: 1920px;
+  height: 250px;
+}
+
+.container {
+  padding: 100px 0px 100px 409px;
+  display: inline-flex;
+}
+
+#project {
+  margin-left: 0px;
+  width: 141px;
+  height: 50px;
+  margin-right: 48px;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.text {
+  color: #fff;
+  font-family: Roboto;
+  width: 60px;
+  height: 50px;
+  float: right;
+  margin-left: 0px;
+}
 
