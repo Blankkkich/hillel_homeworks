@@ -1,5 +1,4 @@
 .main {
-  width: 1920px;
   height: 700px;
   background: #eeeff1;
   padding-left: 382px;
@@ -96,7 +95,7 @@ h2 {
 
 .container {
   padding: 100px 0px 100px 409px;
-  display: inline-flex;
+  display: flex;
 }
 
 #project {

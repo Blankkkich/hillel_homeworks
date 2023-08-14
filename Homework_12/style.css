@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Graphik LC TT;
+  src: url(./fonts/GraphikLCG-Regular.ttf);
+}
+
+.container {
+  margin: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: Graphik LC TT;
+}
+
+header {
+  height: 55px;
+  border-bottom: 1px solid #16161d;
+}
+
+.navigation {
+  margin-left: 51px;
+  margin-top: 34px;
+  width: 700px;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__item {
+  color: #000;
+  font-family: Graphik LC TT;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
+
+.navigation__button {
+  margin-top: -45px;
+  margin-right: 50px;
+  gap: 20px;
+  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.navigation__btn__tryit {
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff6336;
+}
+
+.navigation__btn__login {
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main {
+  width: 100%;
+  margin-top: 97px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  width: 1290px;
+  padding: 18px 75px 0px 75px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 39.984px;
+}
+
+.intro__info h1 {
+  width: 552px;
+  color: #000;
+  font-family: Graphik LC TT;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70px; /* 107.692% */
+}
+
+.intro__info h5 {
+  width: 471px;
+  margin-top: 51px;
+  color: #000;
+  font-family: Graphik LC TT;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 140% */
+}
+
+.intro__btn {
+  display: inline;
+}
+
+.intro__btn__tryit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 60px;
+  background-color: #ff6336;
+}
+
+.intro__btn__demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 60px;
+  border: 1px solid black;
+}
