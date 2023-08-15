@@ -18,14 +18,67 @@ header {
   border-bottom: 1px solid #16161d;
 }
 
-.navigation {
-  margin-left: 51px;
-  margin-top: 34px;
-  width: 700px;
+main {
+  width: 100%;
+  margin-top: 97px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+h1 {
+  width: 552px;
+  color: #000;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70px; /* 107.692% */
+}
+
+h2 {
+  color: #000;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px; /* 120% */
+}
+
+h5 {
+  width: 471px;
+  color: #000;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 140% */
+}
+
+h6 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+}
+
+p {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
 }
 
 ul {
   list-style: none;
+}
+
+.navigation {
+  margin-left: 51px;
+  margin-top: 34px;
+  width: 700px;
 }
 
 .navigation__list {
@@ -72,16 +125,6 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-main {
-  width: 100%;
-  margin-top: 97px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
 .intro {
   display: flex;
   width: 1290px;
@@ -89,25 +132,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   gap: 39.984px;
-}
-
-.intro__info h1 {
-  width: 552px;
-  color: #000;
-  font-size: 65px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 70px; /* 107.692% */
-}
-
-.intro__info h5 {
-  width: 471px;
-  margin-top: 51px;
-  color: #000;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 35px; /* 140% */
 }
 
 .intro__btn {
@@ -160,12 +184,7 @@ main {
 
 .preferred__info {
   width: 720px;
-  color: #000;
   text-align: center;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 60px; /* 120% */
 }
 
 .preferred__companies {
@@ -177,12 +196,80 @@ main {
 }
 
 .functions {
-  padding: 100px 75px 0px 75px;
+  padding: 100px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 200px;
 }
 
-.functions__features {
-  display: inline-flex;
+.functions__features__row {
+  display: flex;
+  gap: 75px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.functions__features__row-reversed {
+  display: flex;
+  gap: 75px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*Так-так, я знаю що це костиль, поясніть будь-ласка на занятті бо я з дітьми не розібрався*/
+
+.functions__features__text {
+  display: flex;
+  width: 657px;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.functions__features__text a {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+}
+
+.related {
+  display: flex;
+  width: 1290px;
+  margin-top: 150px;
+  padding-top: 120px;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  gap: 0.094px;
+  gap: 60px;
+}
+
+.related__possibilities {
+  display: flex;
+  height: 400px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: center;
+  padding: 0px 40px 0px 40px;
+  gap: 110px;
+}
+
+.related__possibilities__card {
+  width: 330px;
+  height: 294px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.related__possibilities__card h5 {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
 }
