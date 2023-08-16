@@ -292,6 +292,27 @@ ul {
   font-weight: 600;
 }
 
+.tenfold {
+  width: 1290px;
+  height: 998px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tenfold__features {
+  display: flex;
+}
+
+.tenfold__features__card {
+  width: 439.984px;
+  height: 609px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .revolut-review {
   background: #c9e8f2;
   width: 1440px;
