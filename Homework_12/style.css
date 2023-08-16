@@ -22,10 +22,10 @@ main {
   width: 100%;
   margin-top: 97px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -43,6 +43,24 @@ h2 {
   font-style: normal;
   font-weight: 600;
   line-height: 60px; /* 120% */
+}
+
+h3 {
+  color: #000;
+  font-family: Graphik LC TT;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px; /* 142.857% */
+}
+
+h4 {
+  color: #000;
+  font-family: Graphik LC TT;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 133.333% */
 }
 
 h5 {
@@ -272,4 +290,70 @@ ul {
   text-align: center;
   width: 100%;
   font-weight: 600;
+}
+
+.revolut-review {
+  background: #c9e8f2;
+  width: 1440px;
+  height: 468px;
+  padding: 0px 75px 0px 75px;
+  margin-top: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.revolut-review__text {
+  margin-top: 63px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.revolut-review__text h4 {
+  width: 920.702px;
+}
+
+.revolut-review__text p {
+  margin-top: 23px;
+  width: 271.581px;
+  color: #000;
+  text-align: start;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 166.667% */
+}
+.most-loved {
+  width: 1440px;
+  height: 332px;
+  background: #dabc98;
+  padding: 70px 75px 0px 75px;
+  display: flex;
+}
+
+.most-loved__text {
+  width: 809px;
+  height: 178px;
+  padding-right: 125px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-right: #2c2c2b;
+  border-style: groove;
+  border-radius: 1px;
+}
+
+.most-loved__text h3 {
+  width: 461px;
+}
+
+.most-loved__review {
 }
