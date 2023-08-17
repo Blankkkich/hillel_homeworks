@@ -1,0 +1,67 @@
+.menu {
+  background: #8397a1;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu,
+.menu a {
+  color: #020101;
+  text-decoration: none;
+}
+
+.menu a {
+  display: block;
+  white-space: nowrap;
+}
+
+.menu-dropdown,
+.menu input[type="checkbox"] {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .menu > label,
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .menu a {
+    padding: 15px 20px;
+  }
+
+  .menu > ul > li {
+    display: inline-block;
+  }
+
+  .menu-hasdropdown {
+    position: relative;
+  }
+  .menu-hasdropdown:hover > ul {
+    display: block;
+    -webkit-animation: grow 0.5s ease-in-out;
+    animation: grow 0.5s ease-in-out;
+  }
+
+  .menu-hasdropdown > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #4c5c64;
+  }
+
+  .menu-hasflyout > ul {
+    left: 100%;
+    top: 0;
+  }
+
+  .menu-hasflyout .menu-downicon {
+    display: none;
+  }
+}
+
+

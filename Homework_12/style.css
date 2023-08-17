@@ -119,7 +119,6 @@ ul {
   margin-top: -45px;
   margin-right: 50px;
   gap: 20px;
-  float: right;
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
