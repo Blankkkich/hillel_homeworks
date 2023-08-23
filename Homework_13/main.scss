@@ -1,0 +1,24 @@
+$bg-color: #FF66CC;
+
+@mixin button-mixin($bg-color: #564670, $hover-color: red) {
+  background-color: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin fancy_border($radius, $color: #1b0303) {
+  border-radius: $radius;
+  border: 1px solid $color;
+  padding: 10px;
+}
+
+.selector {
+  @include fancy-border(10px);
+  background-color: #eee;
+  @include button-mixin;
+}
