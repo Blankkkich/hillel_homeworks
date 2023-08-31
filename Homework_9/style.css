@@ -1,19 +1,9 @@
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 992px) {
-  body {
-    background: #161616;
-  }
-}
-
 .main {
+  margin: 0 auto;
   height: 700px;
   background: #eeeff1;
-  padding-left: 382px;
   padding-top: 59px;
+  padding-left: 15%;
   margin-bottom: 48px;
 }
 
@@ -84,10 +74,10 @@ li {
 
 .aboutme {
   margin-bottom: 105px;
-  margin-left: 685px;
-  width: 540px;
-  height: 147px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
@@ -100,13 +90,11 @@ h2 {
 
 .projects {
   background: var(--accent, #34547a);
-  width: 1920px;
+  width: 100%;
   height: 250px;
-}
-
-.container {
-  padding: 100px 0px 100px 409px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #project {
@@ -131,28 +119,22 @@ h3 {
 
 .video {
   background: #eeeff1;
-  width: 1920px;
-  height: 909px;
   padding-top: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .howdoiwork {
   margin-bottom: 63px;
-  margin-left: 685px;
-  width: 540px;
-  height: 147px;
   text-align: center;
-}
-
-.vid {
-  margin-left: 405px;
 }
 
 footer {
   width: 1517px;
   height: 151px;
   background: var(--accent, #34547a);
-  padding-left: 406px;
+  padding-left: 15px;
   padding-top: 42px;
 }
 
