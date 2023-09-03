@@ -89,7 +89,7 @@ h2 {
   background: var(--accent, #34547a);
   max-height: 300px;
   min-height: 200px;
-  gap:20px;
+  gap: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,8 +103,6 @@ h3 {
 .text {
   color: #fff;
   font-family: Roboto;
-  width: 60px;
-  height: 50px;
   float: right;
 }
 
@@ -142,17 +140,16 @@ footer {
   font-weight: 400;
 }
 
-
 /* mobile */
 
-@media screen and (min-width: 401px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 500px) {
   .main {
     display: flex;
     flex-direction: column;
     padding: 5px 10px;
     margin-bottom: 0.5em;
   }
-  
+
   .navigation {
     padding: 5px;
     display: flex;
@@ -186,7 +183,7 @@ footer {
   }
 
   .projects {
-    gap:40px;
+    gap: 40px;
     padding: 20px;
     flex-direction: column;
     flex-wrap: wrap;
@@ -201,5 +198,67 @@ footer {
     padding: 10px 0px;
     text-align: center;
   }
+}
 
+/* tablets */
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    margin-bottom: 0.5em;
+  }
+
+  .navigation {
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-bottom: #3b3737 1px solid;
+  }
+
+  .navigation li {
+    padding: 0px;
+  }
+
+  .header {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .graytext {
+    align-self: center;
+    max-width: 400px;
+  }
+
+  .button {
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .projects {
+    gap: 40px;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .text {
+    float: none;
+  }
+
+  .video {
+    padding: 15px 20px;
+  }
+
+  footer {
+    height: 25%;
+    padding: 10px 0px;
+    text-align: center;
+  }
 }
