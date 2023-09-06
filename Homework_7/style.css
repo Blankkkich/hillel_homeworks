@@ -1,13 +1,9 @@
 .container {
-  margin: 30px auto;
-  height: 800px;
-  width: 900px;
+  width: 75%;
+  height: 650px;
+  margin: 0px auto;
   background-color: rgb(138, 138, 155);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px;
 }
 
 h2 {
@@ -18,21 +14,50 @@ h2 {
 }
 
 .card {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
-  display: grid;
-  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
   border-style: solid;
   border-width: 2px;
-  border-radius: 15px;
+  border-radius: 40px;
+}
+
+/*i m sorry very well
+после курса вообще невозможно представить как сделать это не через гриды или флексы))*/
+.one {
+  position: relative;
+  left: -300px;
+  top: 50px;
+}
+.two {
+  position: relative;
+  left: 0px;
+  top: -200px;
+}
+.three {
+  position: relative;
+  left: 300px;
+  top: -450px;
+}
+.four {
+  position: relative;
+  left: -300px;
+  top: -400px;
+}
+.five {
+  position: relative;
+  left: 0px;
+  top: -650px;
+}
+.six {
+  position: relative;
+  left: 300px;
+  top: -900px;
 }
 
 div.card .img {
-  margin-left: 11%;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   object-fit: scale-down;
 }
 
