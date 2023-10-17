@@ -8,7 +8,7 @@ const action = prompt("What action you want to do?\n"
 if (action === null || NaN || undefined) {
     alert("Goodbye, see you later.");
 } else {
-    if (action === "Add" || action === "Diff" || action === "Mult" || action === "Div" ||action === "Cos" || action === "Sin"){
+    if (action === "Add" || action === "Diff" || action === "Mult" || action === "Div"){
         const num1 = Number(prompt("Enter first number"));
         const num2 = Number(prompt("Enter second number"));
         if (num1 && num2 === NaN || undefined || null) {
@@ -50,9 +50,9 @@ if (action === null || NaN || undefined) {
                 alert("Cosine of " + angle + " degrees is " + cos);
             }
         } else {
-            alert("Error: Invalid input for angle.");
+            alert("Error: Invalid input for angle. See ya later, aligator");
         }
     } else {
-        alert("Error: Invalid action. Please select one of the specified options.");
+        alert("Error: Invalid action. Good by, see you later.");
     }
 }
