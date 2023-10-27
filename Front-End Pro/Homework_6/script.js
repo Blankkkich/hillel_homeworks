@@ -50,10 +50,30 @@ calculator: do {
                 } while (!Number.isInteger(secondNumber));
 
                 switch (normalizeOperation) {
-                    case 'add': alert(`Sum of ${firstNumber} and ${secondNumber} is ${firstNumber + secondNumber}`); break;
-                    case 'diff': alert(`Diff of ${firstNumber} and ${secondNumber} is ${firstNumber - secondNumber}`); break;
-                    case 'mult': alert(`Miff of ${firstNumber} and ${secondNumber} is ${firstNumber * secondNumber}`); break;
-                    case 'div': alert(`Div of ${firstNumber} and ${secondNumber} is ${firstNumber / secondNumber}`); break;
+                    case 'add': {
+                        const notification = `Sum of ${firstNumber} and ${secondNumber} is ${firstNumber + secondNumber}`;
+                        history.push(notification)
+                        alert(notification);
+                        break;
+                    }
+                    case 'diff': {
+                        const notification = 'Diff of ${firstNumber} and ${secondNumber} is ${firstNumber - secondNumber`;
+                        history.push(notification)
+                        alert(notification);
+                        break;
+                    }
+                    case 'mult': {
+                        const notification = `Miff of ${firstNumber} and ${secondNumber} is ${firstNumber * secondNumber}`;
+                        history.push(notification)
+                        alert(notification);
+                        break;
+                    }
+                    case 'div': {
+                        const notification = `Div of ${firstNumber} and ${secondNumber} is ${firstNumber / secondNumber}`;
+                        history.push(notification)
+                        alert();
+                        break;
+                    }
                     default: alert('Ups somethings went wrong'); break;
                 }
 
@@ -86,11 +106,27 @@ calculator: do {
 
                 switch (normalizeOperation) {
                     case 'sqrt': {
-                        ( number >= 0 ) ? alert(`Root of ${number} is ${Math.sqrt(number)}`) : alert('Number must to be positive');
+                        if (number >= 0){
+                            const notification = `Root of ${number} is ${Math.sqrt(number)}`;
+                            history.push(notification);
+                            alert(notification);
+                            break;
+                        }
+                        alert('Number must to be positive');
                         break;
                     }
-                    case 'sin': alert(`Sin of ${number} is ${Math.sin(number)}`); break;
-                    case 'cos': alert(`Cos of ${number} is ${Math.cos(number)}`); break;
+                    case 'sin': {
+                        const notification = `Sin of ${number} is ${Math.sin(number)}`;
+                        history.push(notification);
+                        alert(notification);
+                        break;
+                    }
+                    case 'cos': {
+                        const notification = `Cos of ${number} is ${Math.cos(number)}`;
+                        history.push(notification);
+                        alert(notification);
+                        break;
+                    }
                     default: alert('Ups somethings went wrong'); break;
                 }
 
@@ -102,6 +138,8 @@ calculator: do {
             }
             case 'history': {
                 if (!history.length) break;
+                //TODO history output
+
                 break;
             }
             default: {
