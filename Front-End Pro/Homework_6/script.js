@@ -57,7 +57,7 @@ calculator: do {
                         break;
                     }
                     case 'diff': {
-                        const notification = 'Diff of ${firstNumber} and ${secondNumber} is ${firstNumber - secondNumber`;
+                        const notification = 'Diff of ${firstNumber} and ${secondNumber} is ${firstNumber - secondNumber';
                         history.push(notification)
                         alert(notification);
                         break;
