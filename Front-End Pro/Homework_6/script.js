@@ -1,9 +1,10 @@
 alert('Welcome to calculator!');
 
 let startCalculation = true;
+const history = [];
 
 calculator: do {
-    const operation = prompt('What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos', 'Add');
+    const operation = prompt(`What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos${history.length ? ', History' : ''}`, 'Add');
 
     if (operation) {
         const normalizeOperation = operation.toLowerCase();
@@ -97,6 +98,10 @@ calculator: do {
                 if (!startCalculation) {
                     alert('Good by, see you later.');
                 }
+                break;
+            }
+            case 'history': {
+                if (!history.length) break;
                 break;
             }
             default: {
