@@ -138,7 +138,16 @@ calculator: do {
             }
             case 'history': {
                 if (!history.length) break;
-                //TODO history output
+                let historyMessage = 'Your operations: \n\n';
+                history.forEach(function (operation,index) {
+                   historyMessage += `${index + 1}. ${operation}\n`;
+                });
+                alert(historyMessage);
+
+                startCalculation = confirm('Do you want continue working with calculator?');
+                if (!startCalculation) {
+                    alert('Good by, see you later.');
+                }
 
                 break;
             }
