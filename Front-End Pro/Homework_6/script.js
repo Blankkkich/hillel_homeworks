@@ -71,16 +71,14 @@ calculator: do {
                     case 'div': {
                         const notification = `Div of ${firstNumber} and ${secondNumber} is ${firstNumber / secondNumber}`;
                         history.push(notification)
-                        alert();
+                        alert(notification);
                         break;
                     }
                     default: alert('Ups somethings went wrong'); break;
                 }
 
-                startCalculation = confirm('Do you want continue working with calculator?');
-                if (!startCalculation) {
-                    alert('Good by, see you later.');
-                }
+                startCalculations();
+
                 break;
             }
             case 'sqrt':
@@ -130,10 +128,7 @@ calculator: do {
                     default: alert('Ups somethings went wrong'); break;
                 }
 
-                startCalculation = confirm('Do you want continue working with calculator?');
-                if (!startCalculation) {
-                    alert('Good by, see you later.');
-                }
+                startCalculations();
                 break;
             }
             case 'history': {
@@ -144,10 +139,7 @@ calculator: do {
                 });
                 alert(historyMessage);
 
-                startCalculation = confirm('Do you want continue working with calculator?');
-                if (!startCalculation) {
-                    alert('Good by, see you later.');
-                }
+                startCalculations();
 
                 break;
             }
@@ -161,3 +153,10 @@ calculator: do {
         alert('Good by, see you later.')
     }
 } while (startCalculation)
+
+function startCalculations () {
+    startCalculation = confirm('Do you want continue working with calculator?');
+    if (!startCalculation) {
+        alert('Good by, see you later.');
+    }
+}
