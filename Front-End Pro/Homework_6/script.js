@@ -5,7 +5,6 @@ const history = [];
 
 calculator: do {
     let calculatorStatus = true;
-
     calculatorStatus: do {
         const operation = prompt(`What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos${history.length ? ', History' : ''}`, 'Add');
 
