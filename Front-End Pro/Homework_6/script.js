@@ -4,8 +4,6 @@ let startCalculation = true;
 const history = [];
 
 calculator: do {
-    let calculatorStatus = true;
-    calculatorStatus: do {
         const operation = prompt(`What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos${history.length ? ', History' : ''}`, 'Add');
 
         if (operation) {
@@ -17,66 +15,36 @@ calculator: do {
                 case 'mult':
                 case 'div': {
 
-                    let firstNumber;
-                    let secondNumber;
-                    validateFirstNumber();
-                    validateSecondNumber();
+                    //TODO не работает, пересмотреть занятие и доделать
+                    const firstUserNumber = getNumber();
+                    const firstNumber = validateNumber(firstUserNumber);
 
-                    // do {
-                    //     const userChose = prompt('Enter first number', 0);
-                    //     if (userChose === null) {
-                    //         startCalculation = false;
-                    //         alert('Good by, see you later.');
-                    //         break calculator;
-                    //     }
-                    //
-                    //     if (userChose === '' || isNaN(parseFloat(userChose))) {
-                    //         alert('This is bad digit, please enter valid number');
-                    //         continue;
-                    //     }
-                    //
-                    //     firstNumber = parseFloat(userChose);
-                    // } while (!Number.isInteger(firstNumber));
-                    //
-                    // do {
-                    //     const userChose = prompt('Enter second number', 0);
-                    //     if (userChose === null) {
-                    //         startCalculation = false;
-                    //         alert('Good by, see you later.');
-                    //         break calculator;
-                    //     }
-                    //
-                    //     if (userChose === '' || isNaN(parseFloat(userChose))) {
-                    //         alert('This is bad digit, please enter valid number');
-                    //         continue;
-                    //     }
-                    //
-                    //     secondNumber = parseFloat(userChose);
-                    // } while (!Number.isInteger(secondNumber));
+                    if (firstNumber === null) {
+                        break calculator
+                    }
+
+                    const secondUserNumber = getNumber();
+                    const secondNumber = validateNumber(secondUserNumber);
+
+                    if (secondNumber === null) {
+                        break calculator
+                    }
 
                     switch (normalizeOperation) {
                         case 'add': {
-                            const notification = `Sum of ${firstNumber} and ${secondNumber} is ${firstNumber + secondNumber}`;
-                            history.push(notification)
-                            alert(notification);
+                            sum(firstNumber,secondNumber, history);
                             break;
                         }
                         case 'diff': {
-                            const notification = 'Diff of ${firstNumber} and ${secondNumber} is ${firstNumber - secondNumber';
-                            history.push(notification)
-                            alert(notification);
+                            diff(firstNumber,secondNumber,history);
                             break;
                         }
                         case 'mult': {
-                            const notification = `Miff of ${firstNumber} and ${secondNumber} is ${firstNumber * secondNumber}`;
-                            history.push(notification)
-                            alert(notification);
+                            mult(firstNumber,secondNumber,history);
                             break;
                         }
-                        case 'div': {
-                            const notification = `Div of ${firstNumber} and ${secondNumber} is ${firstNumber / secondNumber}`;
-                            history.push(notification)
-                            alert(notification);
+                        case 'diverse': {
+                            diverse(firstNumber,secondNumber,history);
                             break;
                         }
                         default:
@@ -91,24 +59,14 @@ calculator: do {
                 case 'sqrt':
                 case 'sin':
                 case 'cos': {
-                    let number;
 
-                    do {
-                        const userChose = prompt('Enter number', 0);
-                        if (userChose === null) {
-                            startCalculation = false;
-                            alert('Good by, see you later.');
-                            break calculator;
-                        }
+                    const userNumber = getNumber();
+                    const number = validateNumber(userNumber);
 
-                        if (userChose === '' || isNaN(parseFloat(userChose))) {
-                            alert('This is bad digit, please enter valid number');
-                            continue;
-                        }
-
-                        number = parseFloat(userChose);
-                    } while (!Number.isInteger(number));
-
+                    if (number === null) {
+                        break calculator
+                    }
+                    //TODO доробити мат функції
                     switch (normalizeOperation) {
                         case 'sqrt': {
                             if (number >= 0) {
@@ -161,54 +119,7 @@ calculator: do {
             startCalculation = false
             alert('Good by, see you later.')
         }
-
-        function validateFirstNumber(firstNumber) {
-            do {
-                const userChose = prompt('Enter first number', 0);
-                if (userChose === null) {
-                    let calculatorStatus;
-                    startCalculation = false;
-                    alert('Good by, see you later.');
-                    return calculatorStatus = false;
-                }
-
-                if (userChose === '' || isNaN(parseFloat(userChose))) {
-                    alert('This is bad digit, please enter valid number');
-                    continue;
-                }
-
-                return firstNumber = parseFloat(userChose);
-            } while (!Number.isInteger(firstNumber));
-
-            return firstNumber;
-        }
-
-        function validateSecondNumber(secondNumber) {
-            do {
-                const userChose = prompt('Enter second number', 0);
-
-                let calculatorStatus;
-                if (userChose === null) {
-                    startCalculation = false;
-                    alert('Good by, see you later.');
-                    return calculatorStatus = false;
-                }
-
-                if (userChose === '' || isNaN(parseFloat(userChose))) {
-                    alert('This is bad digit, please enter valid number');
-                    continue;
-                }
-
-                return secondNumber = parseFloat(userChose);
-            } while (!Number.isInteger(secondNumber));
-        }
-    } while(calculatorStatus);
 } while (startCalculation)
 
-function startCalculations () {
-    startCalculation = confirm('Do you want continue working with calculator?');
-    if (!startCalculation) {
-        alert('Good by, see you later.');
-    }
-}
+
 
