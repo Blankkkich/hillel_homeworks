@@ -22,10 +22,11 @@ function showNotification(action, payload) {
 }
 
 function startCalculations () {
-    startCalculation = confirm('Do you want continue working with calculator?');
-    if (!startCalculation) {
+    shouldContinue = confirm('Do you want continue working with calculator?');
+    if (!shouldContinue) {
         alert('Good by, see you later.');
     }
+    return shouldContinue;
 }
 function getNumber() {
     return prompt('Enter your number');
@@ -35,6 +36,7 @@ function validateNumber(data) {
 
     do {
         if (data === null) {
+            showNotification('goodBye');
             return null;
         }
 
@@ -51,9 +53,11 @@ function validateNumber(data) {
 
         number = parseFloat(data)
     } while (!Number.isInteger(number));
+
+    return number;
 }
 
-function sum(a, b, history = []) {
+function add(a, b, history = []) {
     const sum = a + b;
     const operation = 'Sum of ${a} and ${b} is ${a + b}';
 
@@ -83,7 +87,7 @@ function mult(a, b, history= []) {
     return mult;
 }
 
-function diverse(a, b, history= []) {
+function div(a, b, history= []) {
     const div = a * b;
     const operation = `Div of ${a} and ${b} is ${a / b}`;
 
@@ -91,6 +95,42 @@ function diverse(a, b, history= []) {
 
     showNotification('custom', operation);
     return div;
+}
+function sqrt(a, history) {
+    const sqrt = Math.sqrt(a);
+    const operation = `Root of ${a} is ${sqrt}`;
+
+    if (history) history.push(operation);
+
+    showNotification("custom", operation);
+    return sqrt;
+}
+
+function sin(a, history) {
+    const sin = Math.sin(a);
+    const operation = `Sin of ${a} is ${sin}`;
+
+    if (history) history.push(operation);
+
+    showNotification("custom", operation);
+    return sin;
+}
+
+function cos(a, history) {
+    const cos = Math.cos(a);
+    const operation = `Cos of ${a} is ${cos}`;
+
+    if (history) history.push(operation);
+
+    showNotification("custom", operation);
+    return cos;
+}
+
+function transformFirstChar(array, filter) {
+    if (filter) return array
+        .filter(filter)
+        .map((el) => el[0].toUpperCase() + el.substring(1));
+    return array.map((el) => el[0].toUpperCase() + el.substring(1));
 }
 
 

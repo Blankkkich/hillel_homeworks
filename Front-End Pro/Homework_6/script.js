@@ -1,11 +1,17 @@
-alert('Welcome to calculator!');
-
-let startCalculation = true;
+let shouldContinue = true;
 const history = [];
+const operations = ['add', 'diff', 'mult', 'div', 'sqrt', 'sin', 'cos', 'history'];
+
+showNotification('greeting');
 
 calculator: do {
-        const operation = prompt(`What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos${history.length ? ', History' : ''}`, 'Add');
-
+    const operation = prompt(
+        `What action you want to do?\n\n${transformFirstChar(operations, (el) => {
+            if (el === "history") return history.length;
+            return true;
+        }).join("\n")}`,
+        "Add",
+    );
         if (operation) {
             const normalizeOperation = operation.toLowerCase();
 
@@ -15,7 +21,7 @@ calculator: do {
                 case 'mult':
                 case 'div': {
 
-                    //TODO не работает, пересмотреть занятие и доделать
+
                     const firstUserNumber = getNumber();
                     const firstNumber = validateNumber(firstUserNumber);
 
@@ -32,7 +38,7 @@ calculator: do {
 
                     switch (normalizeOperation) {
                         case 'add': {
-                            sum(firstNumber,secondNumber, history);
+                            add(firstNumber,secondNumber, history);
                             break;
                         }
                         case 'diff': {
@@ -43,8 +49,8 @@ calculator: do {
                             mult(firstNumber,secondNumber,history);
                             break;
                         }
-                        case 'diverse': {
-                            diverse(firstNumber,secondNumber,history);
+                        case 'div': {
+                            div(firstNumber,secondNumber,history);
                             break;
                         }
                         default:
@@ -116,10 +122,10 @@ calculator: do {
                 }
             }
         } else {
-            startCalculation = false
+            shouldContinue = false
             alert('Good by, see you later.')
         }
-} while (startCalculation)
+} while (shouldContinue)
 
 
 
