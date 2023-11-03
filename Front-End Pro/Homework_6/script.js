@@ -1,6 +1,7 @@
+
 let shouldContinue = true;
 const history = [];
-const operations = ['add', 'diff', 'mult', 'div', 'sqrt', 'sin', 'cos', 'history'];
+const operations = ['add', 'diff', 'mult', 'div', 'sqrt', 'sin', 'cos', 'history', 'history-remove'];
 
 alert('Welcome to calculator');
 
@@ -8,6 +9,7 @@ calculator: do {
     const operation = prompt(
         `What action you want to do?\n\n${transformFirstChar(operations, (el) => {
             if (el === "history") return history.length;
+            if (el === 'history-remove') return history.length;
             return true;
         }).join("\n")}`,
         "Add",
@@ -107,6 +109,17 @@ calculator: do {
                 });
                 alert(historyMessage);
 
+                startCalculations();
+
+                break;
+            }
+
+
+            //homework 10
+            case 'history-remove': {
+                if (!history.length) break;
+                if (removeHistory() === null) break;
+                removeHistory(history);
                 startCalculations();
 
                 break;

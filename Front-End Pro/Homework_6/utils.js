@@ -1,3 +1,4 @@
+
 function showNotification(action, payload) {
     switch (action) {
         case 'goodBye' :
@@ -128,6 +129,15 @@ function transformFirstChar(array, filter) {
         .filter(filter)
         .map((el) => el[0].toUpperCase() + el.substring(1));
     return array.map((el) => el[0].toUpperCase() + el.substring(1));
+}
+
+function removeHistory() {
+    const element = Number(prompt('Enter the number of operation to be deleted'));
+    if (element === null || undefined) return null;
+    const index = history.indexOf(element) ;
+    history.splice(index,1);
+
+    console.log(history)
 }
 
 
