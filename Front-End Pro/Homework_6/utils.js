@@ -1,8 +1,5 @@
 function showNotification(action, payload) {
     switch (action) {
-        case 'greeting' :
-            alert('Welcome to calculator');
-            break
         case 'goodBye' :
             alert('Good bye, see you later');
             break;
@@ -59,7 +56,7 @@ function validateNumber(data) {
 
 function add(a, b, history = []) {
     const sum = a + b;
-    const operation = 'Sum of ${a} and ${b} is ${a + b}';
+    const operation = `Sum of ${a} and ${b} is ${a + b}`;
 
     if(history) history.push(operation);
 
