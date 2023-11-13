@@ -1,4 +1,3 @@
-
 let shouldContinue = true;
 const history = [];
 const operations = ['add', 'diff', 'mult', 'div', 'sqrt', 'sin', 'cos', 'history', 'history-remove'];

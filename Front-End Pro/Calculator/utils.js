@@ -1,4 +1,3 @@
-
 function showNotification(action, payload) {
     switch (action) {
         case 'goodBye' :
@@ -19,16 +18,18 @@ function showNotification(action, payload) {
     }
 }
 
-function startCalculations () {
+function startCalculations() {
     shouldContinue = confirm('Do you want continue working with calculator?');
     if (!shouldContinue) {
         alert('Good by, see you later.');
     }
     return shouldContinue;
 }
+
 function getNumber() {
     return prompt('Enter your number');
 }
+
 function validateNumber(data) {
     let number;
 
@@ -42,7 +43,7 @@ function validateNumber(data) {
             showNotification('invalidNumber');
             number = getNumber();
 
-            if (number === null){
+            if (number === null) {
                 showNotification('goodBye');
                 return null;
             }
@@ -59,13 +60,13 @@ function add(a, b, history = []) {
     const sum = a + b;
     const operation = `Sum of ${a} and ${b} is ${a + b}`;
 
-    if(history) history.push(operation);
+    if (history) history.push(operation);
 
     showNotification('custom', operation);
     return sum;
 }
 
-function diff(a, b, history= []) {
+function diff(a, b, history = []) {
     const diff = a - b;
     const operation = `Diff of ${a} and ${b} is ${a - b}`;
 
@@ -75,7 +76,7 @@ function diff(a, b, history= []) {
     return diff;
 }
 
-function mult(a, b, history= []) {
+function mult(a, b, history = []) {
     const mult = a * b;
     const operation = `Mult of ${a} and ${b} is ${a * b}`;
 
@@ -85,7 +86,7 @@ function mult(a, b, history= []) {
     return mult;
 }
 
-function div(a, b, history= []) {
+function div(a, b, history = []) {
     const div = a * b;
     const operation = `Div of ${a} and ${b} is ${a / b}`;
 
@@ -94,6 +95,7 @@ function div(a, b, history= []) {
     showNotification('custom', operation);
     return div;
 }
+
 function sqrt(a, history) {
     const sqrt = Math.sqrt(a);
     const operation = `Root of ${a} is ${sqrt}`;
@@ -134,8 +136,8 @@ function transformFirstChar(array, filter) {
 function removeHistory() {
     const element = Number(prompt('Enter the number of operation to be deleted'));
     if (element === null || undefined) return null;
-    const index = history.indexOf(element) ;
-    history.splice(index,1);
+    const index = history.indexOf(element);
+    history.splice(index, 1);
 
     console.log(history)
 }
