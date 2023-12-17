@@ -160,7 +160,7 @@ class IShop {
             content: `Your ordered ${item.name}`,
         });
 
-        $button.addEventListener("click", (e) => {
+        $button.addEventListener("click", () => {
             document.body.insertAdjacentElement("beforeend", $notification);
 
             setTimeout(() => {
