@@ -16,7 +16,14 @@ const dataShop = {
             year: 2023,
             price: 35000,
         },
-        // Add more car objects as needed
+        {
+            id: 3,
+            name: "Pickup",
+            brand: "FreedomRAHHH",
+            model: "FRDM 800",
+            year: 2015,
+            price: 200000,
+        },
     ],
     components: [
         {
@@ -33,7 +40,13 @@ const dataShop = {
             manufacturer: "TireCo",
             price: 800,
         },
-        // Add more component objects as needed
+        {
+            id: 3,
+            name: "Seat",
+            type: "Luxury 2-Seats Pack",
+            manufacturer: "Seats & Co.",
+            price: 20000
+        },
     ],
     services: [
         {
@@ -48,6 +61,11 @@ const dataShop = {
             description: "Inspect and replace brake pads if necessary",
             price: 80,
         },
-        // Add more service objects as needed
+        {
+            id: 3,
+            name: "Tires Pump-Up",
+            description: "Pumping up the tires",
+            price: 60,
+        },
     ],
 };
